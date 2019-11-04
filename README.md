@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/npradeep357/WebSocket-ChatApplication.svg?branch=master)](https://travis-ci.com/npradeep357/WebSocket-ChatApplication)
+
 # WebSocket-ChatApplication
 
 Chat application built based on web socket protocol using embedded jetty.
