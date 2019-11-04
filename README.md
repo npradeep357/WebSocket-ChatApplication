@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/npradeep357/WebSocket-ChatApplication.svg?branch=master)](https://travis-ci.com/npradeep357/WebSocket-ChatApplication)
+[![Build Status](https://travis-ci.org/npradeep357/WebSocket-ChatApplication.svg?branch=master)](https://travis-ci.org/npradeep357/WebSocket-ChatApplication)
 
 # WebSocket-ChatApplication
 
