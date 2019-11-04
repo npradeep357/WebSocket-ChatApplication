@@ -89,6 +89,7 @@
 									</mainClass>
 								</manifest>
 							</archive>
+							<finalName>${project.artifactId}</finalName>
 							<descriptorRefs>
 								<descriptorRef>jar-with-dependencies</descriptorRef>
 							</descriptorRefs>
@@ -115,18 +116,11 @@
 							<classifier>jar-with-dependencies</classifier>
 							<packaging>jar</packaging>
 							<type>jar</type>
+							<file>${project.build.directory}/${project.artifactId}-jar-with-dependencies.jar</file>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-
-			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-deploy-plugin</artifactId> 
-				<executions> <execution> <id>deploy-with-dep</id> <phase>deploy</phase> <goals> 
-				<goal>deploy-file</goal> </goals> <configuration> <repositoryId>${project.distributionManagement.snapshotRepository.id}</repositoryId> 
-				<url>${project.distributionManagement.snapshotRepository.url}</url> <groupId>${project.groupId}</groupId> 
-				<artifactId>${project.artifactId}</artifactId> <classifier>jar-with-dependencies</classifier> 
-				<packaging>jar</packaging> <type>jar</type> <file>${project.build.directory}/${project.artifactId}-${project.version}-jar-with-dependencies.jar</file> 
-				</configuration> </execution> </executions> </plugin> -->
 		</plugins>
 	</build>
 
