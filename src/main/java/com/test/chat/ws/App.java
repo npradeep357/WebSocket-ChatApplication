@@ -1,10 +1,10 @@
-package com.test.chat_ws;
+package com.test.chat.ws;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.test.chat_ws.exception.ServerException;
-import com.test.chat_ws.server.JettyServerImpl;
+import com.test.chat.ws.exception.ServerException;
+import com.test.chat.ws.server.JettyServerImpl;
 
 /**
  * @author npradeep357

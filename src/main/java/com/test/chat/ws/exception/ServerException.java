@@ -1,4 +1,4 @@
-package com.test.chat_ws.exception;
+package com.test.chat.ws.exception;
 
 public class ServerException extends Exception {
 
