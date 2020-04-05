@@ -22,4 +22,26 @@ Now you can connect to the websocket server using ws://localhost:8080/chat/ url.
 
 4) To stop the server either use keyboard shortcut on the cmd/shell - "ctrl+c" or give a POST request to "http://localhost:8080/shutdown?token="
 
+# Messaging Format
+
+## subscribe:
+{
+  "subscribe":"chat",
+  "name":"..."
+}
+
+## message:
+{
+"message":"..."
+}
+
+## unsubscribe:
+{
+  "unsubscribe":"chat"
+}
+
+
+
+
+
 You are welcome to modify the code as you need after clonning/downloading to your local machine.
