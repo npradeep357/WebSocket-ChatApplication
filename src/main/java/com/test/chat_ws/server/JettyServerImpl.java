@@ -4,7 +4,6 @@ import java.io.Closeable;
 import java.io.IOException;
 
 import javax.servlet.ServletContext;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 
 import org.eclipse.jetty.server.Connector;
@@ -18,8 +17,6 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer;
 import org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer.Configurator;
-import org.eclipse.jetty.websocket.servlet.WebSocketServlet;
-import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,17 +27,12 @@ import com.test.chat_ws.exception.ServerException;
  */
 public class JettyServerImpl implements Closeable {
 
-    @WebServlet(name = "MyEcho WebSocket Servlet", urlPatterns = { "/chat" })
-    private final class WebSocketServletImpl extends WebSocketServlet {
-        private static final long serialVersionUID = 1L;
-
-        @Override
-        public void configure(
-                WebSocketServletFactory factory) {
-            factory.getPolicy().setIdleTimeout(0);
-            factory.register(WebSocketServer.class);
-        }
-    }
+    /*
+     * @WebServlet(name = "MyEcho WebSocket Servlet", urlPatterns = { "/chat" }) private final class
+     * WebSocketServletImpl extends WebSocketServlet { private static final long serialVersionUID = 1L;
+     * @Override public void configure( WebSocketServletFactory factory) { factory.getPolicy().setIdleTimeout(0);
+     * factory.register(WebSocketServer.class); } }
+     */
 
     private static final Logger LOG = LoggerFactory.getLogger(JettyServerImpl.class);
 

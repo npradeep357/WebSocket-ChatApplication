@@ -36,7 +36,7 @@ public class WebSocketServer {
             String message) {
         LOG.debug("message {} recieved form session {}", message, session.getId());
         if (sessions.contains(session)) {
-            sessions.stream().filter(s -> !s.getId().equals(session.getId()))
+            sessions.stream().filter(s -> s.getId().equals(session.getId()))
                     .forEach(s -> s.getAsyncRemote().sendText(message));
         }
     }

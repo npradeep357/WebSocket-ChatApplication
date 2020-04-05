@@ -17,7 +17,7 @@ public class App {
             String[] args) {
 
         // using auto closeable feature to stop server.
-        try (var server = new JettyServerImpl();) {
+        try (var server = new JettyServerImpl()) {
 
             server.setPort(8080);
 
@@ -30,6 +30,6 @@ public class App {
         } catch (Exception e) {
             LOG.error(e.getMessage());
         }
-
+        System.exit(0);
     }
 }
